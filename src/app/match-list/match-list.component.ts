@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Match } from './Match';
 
 @Component({
   selector: 'app-match-list',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MatchListComponent implements OnInit {
 
-  match = {
+  match: Match = {
     "match": "Nacional vs Peñarol",
     "stadium" : "Estadio Centenario, Uruguay",
     "capacity" : 60000,
