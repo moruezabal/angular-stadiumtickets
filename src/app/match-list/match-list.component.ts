@@ -13,25 +13,43 @@ export class MatchListComponent implements OnInit {
     "match": "Nacional vs Peñarol",
     "stadium" : "Estadio Centenario, Uruguay",
     "capacity" : 60000,
-    "available" : 0,
+    "available" : 10,
     "local" : "assets/img/nacional.png",
     "visitor" : "assets/img/penarol.png",
     "offer" : true,
+    "quantity": 0,
   },
   {
     "match": "River vs Boca",
     "stadium" : "Monumental, Argentina",
     "capacity" : 70000,
-    "available" : 35000,
+    "available" : 0,
     "local" : "assets/img/river.png",
     "visitor" : "assets/img/boca.png",
     "offer" : false,
+    "quantity": 0,
   }
 ]
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  upQuantity(match: Match) : void{
+    if (match.quantity < match.available){
+      match.quantity++;
+    }
+  }
+
+  downQuantity(match: Match) : void{
+    if(match.quantity > 0){
+      match.quantity--;
+    }
+  }
+
+  changeQuantity(event, match: Match){
+    console.log(event.key); // A corregir
   }
 
 }

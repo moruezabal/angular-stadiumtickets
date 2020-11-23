@@ -3,22 +3,30 @@
 <table class="table">
     <thead>
         <tr>
-            <th>Local</th>
-            <th>Visitante</th>
+            <th class="home-away">Local</th>
+            <th class="home-away">Visitante</th>
             <th>Partido</th>
             <th>Estadio</th>
             <th>Capacidad</th>
             <th>Disponibles</th>
+            <th>Compra</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let match of matchs" [ngClass]="{'offer': match.offer}">
-            <td><img class = "img-fluid" [src]="match.local" [alt]="match.match"></td>
-            <td><img class = "img-fluid" [src]="match.visitor" [alt]="match.match"></td>
+            <td class="home-away"><img width = 100 class= "img-thumbnail" [src]="match.local" [alt]="match.match"></td>
+            <td class="home-away"><img width = 100 class= "img-thumbnail" [src]="match.visitor" [alt]="match.match"></td>
             <td>{{match.match}}</td>
             <td>{{match.stadium}}</td>
             <td>{{match.capacity}}</td>
             <td><span class="badge badge-warning" *ngIf = 'match.available == 0'>AGOTADO</span></td>
+            <td>
+                <button class="btn btn-primary" (click)="downQuantity(match)">-</button>
+                <input type="number" 
+                [(ngModel)]="match.quantity"
+                (keyup) = "changeQuantity($event, match)">
+                <button class="btn btn-primary" (click)="upQuantity(match)">+</button>
+            </td>
         </tr>
     </tbody>
 </table>

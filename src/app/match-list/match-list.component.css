@@ -6,3 +6,7 @@ h1{
     border: 2px solid green;
     background-color: limegreen;
 }
+
+.home-away{
+    width: 100px;
+}

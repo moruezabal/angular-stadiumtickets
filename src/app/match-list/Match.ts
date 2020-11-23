@@ -6,5 +6,6 @@ export interface Match{
     local: String;
     visitor: String;
     offer: boolean;
+    quantity: number;
 
 }
