@@ -9,6 +9,8 @@ import { StadiumTicketsAboutComponent } from './stadium-tickets-about/stadium-ti
 import { StadiumTicketsMatchsComponent } from './stadium-tickets-matchs/stadium-tickets-matchs.component';
 import { CartComponent } from './cart/cart.component'; // Two-Way Data Binding -  Banana in a box
 
+import { AppRoutingModule } from "./app-routing.module";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +21,7 @@ import { CartComponent } from './cart/cart.component'; // Two-Way Data Binding -
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     FormsModule
   ],
   providers: [],
