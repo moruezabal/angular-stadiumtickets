@@ -12,27 +12,13 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
+        <tr *ngFor="let match of matchs" [ngClass]="{'offer': match.offer}">
             <td><img class = "img-fluid" [src]="match.local" [alt]="match.match"></td>
             <td><img class = "img-fluid" [src]="match.visitor" [alt]="match.match"></td>
             <td>{{match.match}}</td>
             <td>{{match.stadium}}</td>
             <td>{{match.capacity}}</td>
-            <td>{{match.available}}</td>
-        </tr>
-        <tr>
-            <td><img class = "img-fluid" [src]="match.local" [alt]="match.match"></td>
-            <td><img class = "img-fluid" [src]="match.visitor" [alt]="match.match"></td>
-            <td>River vs Boca</td>
-            <td>Estadio Monumental, Argentina</td>
-            <td>70000</td>
-            <td>20000</td>
-        </tr>
-        <tr>
-            <td>América vs Chivas Guadalajara</td>
-            <td>Estadio Azteca</td>
-            <td>87500</td>
-            <td>50000</td>
+            <td><span class="badge badge-warning" *ngIf = 'match.available == 0'>AGOTADO</span></td>
         </tr>
     </tbody>
 </table>

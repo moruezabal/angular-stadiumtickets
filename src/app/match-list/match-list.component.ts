@@ -8,14 +8,26 @@ import { Match } from './Match';
 })
 export class MatchListComponent implements OnInit {
 
-  match: Match = {
+  matchs: Match[] = [ 
+  {
     "match": "Nacional vs Peñarol",
     "stadium" : "Estadio Centenario, Uruguay",
     "capacity" : 60000,
-    "available" : 22000,
+    "available" : 0,
     "local" : "assets/img/nacional.png",
-    "visitor" : "assets/img/penarol.png"
+    "visitor" : "assets/img/penarol.png",
+    "offer" : true,
+  },
+  {
+    "match": "River vs Boca",
+    "stadium" : "Monumental, Argentina",
+    "capacity" : 70000,
+    "available" : 35000,
+    "local" : "assets/img/river.png",
+    "visitor" : "assets/img/boca.png",
+    "offer" : false,
   }
+]
 
   constructor() { }
 

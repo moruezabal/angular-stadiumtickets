@@ -1,9 +1,10 @@
 export interface Match{
     match : String;
     stadium: String;
-    capacity: Number;
-    available: Number;
+    capacity: number;
+    available: number;
     local: String;
     visitor: String;
+    offer: boolean;
 
 }
