@@ -5,7 +5,7 @@ import { StadiumTicketsAboutComponent } from './stadium-tickets-about/stadium-ti
 
 
 export const routes: Routes = [
-{ path: '',redirectTo: 'beers',pathMatch: 'full' },
+{ path: '',redirectTo: 'matchs',pathMatch: 'full' },
 { path: 'matchs', component: StadiumTicketsMatchsComponent },
 { path: 'about', component: StadiumTicketsAboutComponent },
 ];

@@ -9,10 +9,10 @@
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Partidos</a>
+        <a [routerLink]="['/matchs']" class="nav-link" href="#">Partidos</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Contacto</a>
+        <a [routerLink]="['/abouts']" class="nav-link" href="#">Contacto</a>
       </li>
       <li class="nav-item">
         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
@@ -20,5 +20,5 @@
     </ul>
   </div>
 </nav>
-<app-stadium-tickets-matchs></app-stadium-tickets-matchs>
+<router-outlet></router-outlet>
 <footer> {{title}} 2020 </footer>
