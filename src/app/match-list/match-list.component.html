@@ -19,13 +19,7 @@
             <td>{{match.stadium}}</td>
             <td><span class="badge badge-warning" *ngIf = 'match.available == 0'>AGOTADO</span></td>
             <td>
-                <div class="btn-group" role="group" aria-label="Basic example">
-                    <button class="btn btn-primary btn-sm" (click)="downQuantity(match)">-</button>
-                    <input type="number" class="form-control input-group-sm" 
-                    [(ngModel)]="match.quantity"
-                    (keyup) = "changeQuantity($event, match)">
-                    <button class="btn btn-primary btn-sm" (click)="upQuantity(match)">+</button>
-                </div>
+                <app-input-integer [match]= "match"></app-input-integer>
             </td>
         </tr>
     </tbody>
