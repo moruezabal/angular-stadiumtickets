@@ -10,6 +10,7 @@ import { StadiumTicketsMatchsComponent } from './stadium-tickets-matchs/stadium-
 import { CartComponent } from './cart/cart.component'; // Two-Way Data Binding -  Banana in a box
 
 import { AppRoutingModule } from "./app-routing.module";
+import { InputIntegerComponent } from './input-integer/input-integer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AppRoutingModule } from "./app-routing.module";
     MatchListComponent,
     StadiumTicketsAboutComponent,
     StadiumTicketsMatchsComponent,
-    CartComponent
+    CartComponent,
+    InputIntegerComponent
   ],
   imports: [
     BrowserModule,

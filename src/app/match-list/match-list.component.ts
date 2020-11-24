@@ -34,20 +34,6 @@ export class MatchListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  upQuantity(match: Match) : void{
-    if (match.quantity < match.available){
-      match.quantity++;
-    }
-  }
-
-  downQuantity(match: Match) : void{
-    if(match.quantity > 0){
-      match.quantity--;
-    }
-  }
-
-  changeQuantity(event, match: Match){
-    console.log(event.key); // A corregir
-  }
+  
 
 }
