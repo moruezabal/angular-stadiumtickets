@@ -12,7 +12,6 @@ export class MatchListComponent implements OnInit {
   {
     "match": "Nacional vs Peñarol",
     "stadium" : "Estadio Centenario, Uruguay",
-    "capacity" : 60000,
     "available" : 10,
     "local" : "assets/img/nacional.png",
     "visitor" : "assets/img/penarol.png",
@@ -22,7 +21,6 @@ export class MatchListComponent implements OnInit {
   {
     "match": "River vs Boca",
     "stadium" : "Monumental, Argentina",
-    "capacity" : 70000,
     "available" : 0,
     "local" : "assets/img/river.png",
     "visitor" : "assets/img/boca.png",
