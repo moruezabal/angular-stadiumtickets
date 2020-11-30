@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
 import { Match } from '../match-list/Match';
 
 
@@ -12,22 +12,31 @@ export class InputIntegerComponent implements OnInit {
   constructor() { }
 
   @Input()
-  match: Match;
+  quantity: number;
 
-  upQuantity(match: Match) : void{
-    if (match.quantity < match.available){
-      match.quantity++;
+  @Input()
+  max: number;
+
+  @Output()
+  quantityChange: EventEmitter<number> = new EventEmitter<number>();
+
+  upQuantity() : void{
+    if (this.quantity < this.max){
+      this.quantity++;
+      this.quantityChange.emit(this.quantity);
     }
   }
 
-  downQuantity(match: Match) : void{
-    if(match.quantity > 0){
-      match.quantity--;
+  downQuantity() : void{
+    if(this.quantity > 0){
+      this.quantity--;
+      this.quantityChange.emit(this.quantity);
     }
   }
 
-  changeQuantity(event, match: Match){
+  changeQuantity(event){
     console.log(event.key); // A corregir
+    this.quantityChange.emit(this.quantity);
   }
 
   ngOnInit(): void {

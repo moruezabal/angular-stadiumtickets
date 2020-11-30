@@ -1,7 +1,7 @@
 <div class="btn-group" role="group" aria-label="Basic example">
-    <button class="btn btn-primary btn-sm" (click)="downQuantity(match)">-</button>
+    <button class="btn btn-primary btn-sm" (click)="downQuantity()">-</button>
     <input type="text" class="form-control input-group-sm" 
-    [(ngModel)]="match.quantity"
-    (keyup) = "changeQuantity($event, match)">
-    <button class="btn btn-primary btn-sm" (click)="upQuantity(match)">+</button>
+    [(ngModel)]="quantity"
+    (keyup) = "changeQuantity($event)">
+    <button class="btn btn-primary btn-sm" (click)="upQuantity()">+</button>
 </div>
