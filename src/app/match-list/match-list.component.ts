@@ -34,6 +34,8 @@ export class MatchListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  
+  maxReached(message: string){
+    alert(message);
+  }
 
 }

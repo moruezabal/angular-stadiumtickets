@@ -19,7 +19,7 @@
             <td>{{match.stadium}}</td>
             <td><span class="badge badge-warning" *ngIf = 'match.available == 0'>AGOTADO</span></td>
             <td>
-                <app-input-integer [(quantity)]= "match.quantity" [max] = "match.available" ></app-input-integer>
+                <app-input-integer [(quantity)]= "match.quantity" [max] = "match.available" (maxReached) = maxReached($event)></app-input-integer>
             </td>
         </tr>
     </tbody>
