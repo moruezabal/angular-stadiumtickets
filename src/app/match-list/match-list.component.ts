@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatchCartService } from '../match-cart.service';
 import { Match } from './Match';
 
 @Component({
@@ -21,7 +22,7 @@ export class MatchListComponent implements OnInit {
   {
     "match": "River vs Boca",
     "stadium" : "Monumental, Argentina",
-    "available" : 0,
+    "available" : 5,
     "local" : "assets/img/river.png",
     "visitor" : "assets/img/boca.png",
     "offer" : false,
@@ -29,9 +30,18 @@ export class MatchListComponent implements OnInit {
   }
 ]
 
-  constructor() { }
+  constructor(private cart: MatchCartService) {
+
+   }
 
   ngOnInit(): void {
+  }
+
+  addToCart(match) :void {
+    this.cart.addToCart(match);
+    match.available -= match.quantity;
+    match.quantity = 0;
+
   }
 
   maxReached(message: string){

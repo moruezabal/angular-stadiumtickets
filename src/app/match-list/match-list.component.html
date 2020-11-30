@@ -8,6 +8,7 @@
             <th>Partido</th>
             <th>Estadio</th>
             <th>Disp</th>
+            <th>Cantidad</th>
             <th>Compra</th>
         </tr>
     </thead>
@@ -20,6 +21,10 @@
             <td><span class="badge badge-warning" *ngIf = 'match.available == 0'>AGOTADO</span></td>
             <td>
                 <app-input-integer [(quantity)]= "match.quantity" [max] = "match.available" (maxReached) = maxReached($event)></app-input-integer>
+                
+            </td>
+            <td>
+                <button class= "btn btn-primary" (click) = "addToCart(match)">Comprar</button>
             </td>
         </tr>
     </tbody>
